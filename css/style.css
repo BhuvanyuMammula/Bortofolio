@@ -268,8 +268,10 @@ width:90%;
 
 .hero-content img{
 
-margin:auto;
-margin-bottom:25px;
+width: 220px;  
+height: auto;
+margin: auto;
+margin-bottom: 25px;
 
 }
 
