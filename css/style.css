@@ -826,7 +826,7 @@ SCROLLBAR
 
 ::-webkit-scrollbar{
 
-width:10px;
+width:5px;
 
 }
 
@@ -846,7 +846,7 @@ border-radius:10px;
 
 ::-webkit-scrollbar-thumb:hover{
 
-background:var(--gold);
+background:var(--purple-dark);
 
 }
 
@@ -892,6 +892,13 @@ text-shadow:0 5px 20px rgba(0,0,0,.35);
 
 text-shadow:0 2px 10px rgba(0,0,0,.3);
 
+}
+
+.footer-logo{
+    width: 300px;     
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
 }
 
 footer p{
