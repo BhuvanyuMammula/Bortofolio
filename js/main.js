@@ -11,28 +11,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const video = document.getElementById("intro-video");
 const scroll = document.querySelector(".scroll");
+const heroContent = document.querySelector(".hero-content");
 
 if (scroll) {
-scroll.style.opacity = "0";
-scroll.style.transition = "opacity 1s ease";
+    scroll.style.opacity = "0";
+    scroll.style.transition = "opacity 1s ease";
+}
+
+if (heroContent) {
+    heroContent.style.opacity = "0";
+    heroContent.style.transform = "translate(-50%, -45%)";
+    heroContent.style.transition =
+        "opacity 1.5s ease, transform 1.5s ease";
 }
 
 if (video) {
 
-// Make sure it never loops
-video.loop = false;
+    // Never loop
+    video.loop = false;
 
-// When the intro ends, show "Scroll to Begin"
-video.addEventListener("ended", () => {
+    // Fade in logo & title after a short delay
+    setTimeout(() => {
 
-if (scroll) {
-scroll.style.opacity = "1";
+        if (heroContent) {
+            heroContent.style.opacity = "1";
+            heroContent.style.transform = "translate(-50%, -50%)";
+        }
+
+    }, 700);
+
+    // When video finishes
+    video.addEventListener("ended", () => {
+
+        // Freeze on the final frame
+        video.pause();
+
+        // Show Scroll indicator
+        if (scroll) {
+            scroll.style.opacity = "1";
+        }
+
+    });
+
 }
-
-});
-
-}
-
 // -----------------------------
 // Navbar Background
 // -----------------------------
