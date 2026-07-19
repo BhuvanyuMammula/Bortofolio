@@ -66,19 +66,28 @@ NAVIGATION
 position:fixed;
 top:0;
 left:0;
-width:100%;
 
-padding:20px 8%;
+width:100%;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(30, 0, 51);
-backdrop-filter:blur(12px);
+padding:18px 7%;
 
-z-index:999;
-transition:.35s;
+background:linear-gradient(
+180deg,
+rgba(30,0,51,.95) 0%,
+rgba(45,10,80,.82) 40%,
+rgba(75,31,115,.45) 70%,
+rgba(75,31,115,0) 100%
+);
+
+backdrop-filter:blur(8px);
+
+z-index:1000;
+
+transition:.35s ease;
 
 }
 
@@ -86,29 +95,35 @@ transition:.35s;
 
 display:flex;
 align-items:center;
-gap:15px;
+gap:18px;
 
 }
 
 .logo img{
 
-width:55px;
+width:68px;
+height:68px;
+object-fit:contain;
 
 }
 
 .logo h2{
 
 font-family: "Bodoni Moda", serif;
-font-weight: 400;
-color:white;
+font-size:2rem;
+font-weight:700;
 letter-spacing:3px;
+color:white;
 
 }
 
 .navbar ul{
 
 display:flex;
-gap:35px;
+
+align-items:center;
+
+gap:45px;
 
 }
 
@@ -121,9 +136,14 @@ display:inline-block;
 .navbar a{
 
 position:relative;
+
 color:white;
+
+font-size:18px;
+
 font-weight:500;
-transition:.35s;
+
+transition:.3s;
 
 }
 
@@ -133,17 +153,17 @@ color:var(--gold);
 
 }
 
-/* Gold underline */
-
 .navbar a::after{
 
 content:"";
+
 position:absolute;
 
-left:0;
-bottom:-6px;
+left:50%;
 
-width:0%;
+bottom:-8px;
+
+width:0;
 
 height:2px;
 
@@ -151,11 +171,19 @@ background:var(--gold);
 
 transition:.35s;
 
+transform:translateX(-50%);
+
 }
 
 .navbar a:hover::after{
 
 width:100%;
+
+}
+
+.navbar a:hover{
+
+color:var(--gold);
 
 }
 
