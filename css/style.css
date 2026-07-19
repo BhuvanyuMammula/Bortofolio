@@ -201,141 +201,155 @@ color:var(--gold);
 }
 
 /* ===========================
-HERO
+   HERO
 =========================== */
 
 .hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
 
-position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-height:100vh;
-
-overflow:hidden;
-
-background:var(--purple);
-
+    overflow: hidden;
+    background: var(--purple);
 }
 
 .page-hero{
-
-height:60vh;
-
-}
-
-.hero video{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-z-index:0;
-
-}
-
-.hero-image{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-z-index:0;
-
-}
-
-/* Overlay */
-
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:
-
-linear-gradient(
-
-to bottom,
-
-rgba(25,10,40,.35),
-
-rgba(75,31,115,.60)
-
-);
-
-z-index:1;
-
+    height: 60vh;
 }
 
 /* ===========================
-HERO CONTENT
+   VIDEO / IMAGE
+=========================== */
+
+.hero video,
+.hero-image{
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.hero::after{
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,8,35,.25),
+            rgba(60,20,95,.55)
+        );
+
+    z-index: 1;
+}
+
+/* ===========================
+   HERO CONTENT
 =========================== */
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-45%);
-text-align:center;
-color:white;
-z-index:2;
-width:90%;
 
-opacity:0;
-transition:opacity 1.5s ease, transform 1.5s ease;
+    position: relative;
 
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease;
 }
+
+/* Fade-in class */
+
+.hero-content.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================
+   LOGO
+=========================== */
 
 .hero-content img{
 
-width: 220px;  
-height: auto;
-margin: auto;
-margin-bottom: 25px;
+    width: 220px;
+    height: auto;
 
+    margin-bottom: 25px;
 }
+
+/* ===========================
+   HEADING
+=========================== */
 
 .hero-content h1{
 
-font-family:Cinzel,serif;
+    font-family: Cinzel, serif;
 
-font-size:5rem;
+    font-size: clamp(3rem, 7vw, 6rem);
 
-letter-spacing:6px;
+    font-weight: 700;
 
-margin-bottom:15px;
+    line-height: 1.05;
 
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
+
+/* ===========================
+   SUBTITLE
+=========================== */
 
 .hero-content p{
 
-font-size:1.3rem;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
 
-opacity:.95;
+    max-width: 800px;
 
-max-width:700px;
+    margin: 0 auto;
 
-margin:auto;
+    opacity: .95;
 
+    line-height: 1.6;
+
+    text-shadow: 0 4px 15px rgba(0,0,0,.35);
 }
-
 /* ===========================
 SCROLL INDICATOR
 =========================== */
