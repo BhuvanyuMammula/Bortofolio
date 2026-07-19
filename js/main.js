@@ -66,12 +66,14 @@ if(!navbar) return;
 
 if(window.scrollY > 50){
 
-navbar.style.background = "rgba(43,16,71,0.95)";
+navbar.style.background =
+"linear-gradient(180deg,#1e0033 0%,#2d0a50 100%)";
 navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,.2)";
 
 }else{
 
-navbar.style.background = "rgba(43,16,71,.75)";
+navbar.style.background =
+"linear-gradient(180deg,rgba(30,0,51,.95),rgba(75,31,115,0))";
 navbar.style.boxShadow = "none";
 
 }
