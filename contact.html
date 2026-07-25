@@ -81,7 +81,33 @@ Replace the information below with your official contact details.
 <hr style="margin:20px 0;">
 
 <h3>Location</h3>
-<p>Sharjah, United Arab Emirates</p>
+
+<div class="map-container">
+  <iframe 
+    src="https://maps.app.goo.gl/FnV1UvrSZq29koTq9" 
+    width="100%" 
+    height="350" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<style>
+  .map-container {
+    border: 3px solid #FFD700; /* Gold border */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(112, 0, 255, 0.4);
+    max-width: 600px;
+  }
+
+  .map-container iframe {
+    /* Converts standard Google Maps into deep purple and gold tones */
+    filter: invert(90%) hue-rotate(220deg) contrast(120%) saturate(150%);
+  }
+</style>
 
 </div>
 
