@@ -532,18 +532,6 @@ height:220px;
 
 object-fit:cover;
 
-.map-container {
-    border: 3px solid #FFD700;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(112, 0, 255, 0.4); 
-    max-width: 600px;
-  }
-
-  .map-container iframe {
-   
-    filter: invert(90%) hue-rotate(220deg) contrast(120%) saturate(150%);
-
 }
 
 /* ===========================
@@ -736,6 +724,18 @@ min-height:180px;
 outline:none;
 
 box-shadow:0 0 0 3px rgba(212,175,55,.35);
+
+.map-container {
+    border: 3px solid #FFD700;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(112, 0, 255, 0.4); 
+    max-width: 600px;
+  }
+
+  .map-container iframe {
+   
+    filter: invert(90%) hue-rotate(220deg) contrast(120%) saturate(150%);
 
 }
 
