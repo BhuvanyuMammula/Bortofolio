@@ -29,8 +29,7 @@ overflow-x:hidden;
 }
 
 body{
-
-font-family: "Bodoni Moda", serif;
+font-family: 'Playfair Display', Georgia, serif;
 background:var(--white);
 color:var(--text);
 overflow-x:hidden;
@@ -61,144 +60,63 @@ list-style:none;
 NAVIGATION
 =========================== */
 
-.navbar{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-
-padding:18px 7%;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-background:linear-gradient(
-180deg,
-rgba(30,0,51,.95) 0%,
-rgba(45,10,80,.82) 40%,
-rgba(75,31,115,.45) 70%,
-rgba(75,31,115,0) 100%
-);
-
-transition:
-background-color .4s ease,
-padding .4s ease,
-box-shadow .4s ease,
-backdrop-filter .4s ease;
-
-backdrop-filter:blur(6px);
-
-z-index:1000;
-
+.hmun-header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.navbar.scrolled{
-
-background:rgba(30,0,51,.96);
-
-backdrop-filter:blur(14px);
-
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Solid dark purple by default for inner pages */
+  background: var(--purple-dark); 
+  transition: background-color .4s ease, padding .4s ease, box-shadow .4s ease, backdrop-filter .4s ease;
+  z-index: 1000;
 }
 
-.logo{
-
-display:flex;
-align-items:center;
-gap:18px;
-
+/* HOMEPAGE SPECIFIC NAV (Transparent over video) */
+.home .navbar {
+  background: transparent;
 }
 
-.logo img{
-
-width:68px;
-height:68px;
-object-fit:contain;
-
+.home .navbar.scrolled {
+  background: rgba(30,0,51,.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-.logo h2{
-
-font-family: "Bodoni Moda", serif;
-font-size:2rem;
-font-weight:700;
-letter-spacing:3px;
-color:white;
-
+.logo { display: flex; align-items: center; gap: 18px; }
+.logo img { width: 68px; height: 68px; object-fit: contain; }
+.logo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 700;
+  letter-spacing: 3px; color: white;
 }
 
-.navbar ul{
-
-display:flex;
-
-align-items:center;
-
-gap:45px;
-
+.navbar ul { display: flex; align-items: center; gap: 45px; }
+.navbar li { display: inline-block; }
+.navbar a {
+  position: relative; color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  transition: .3s;
 }
 
-.navbar li{
-
-display:inline-block;
-
+.navbar a:hover { color: var(--gold); }
+.navbar a::after {
+  content: ""; position: absolute; left: 50%; bottom: -8px;
+  width: 0; height: 2px; background: var(--gold);
+  transition: .35s; transform: translateX(-50%);
 }
-
-.navbar a{
-
-position:relative;
-
-color:white;
-
-font-size:18px;
-
-font-weight:500;
-
-transition:.3s;
-
-}
-
-.navbar a:hover{
-
-color:var(--gold);
-
-}
-
-.navbar a::after{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-
-bottom:-8px;
-
-width:0;
-
-height:2px;
-
-background:var(--gold);
-
-transition:.35s;
-
-transform:translateX(-50%);
-
-}
-
-.navbar a:hover::after{
-
-width:100%;
-
-}
-
-.navbar a:hover{
-
-color:var(--gold);
-
-}
+.navbar a:hover::after { width: 100%; }
 
 /* ===========================
 NAV TOGGLE (mobile hamburger)
@@ -305,148 +223,66 @@ right:0;
 }
 
 /* ===========================
-   HERO
+HERO (HMUN STYLED)
 =========================== */
-
-.hero{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    overflow: hidden;
-    background: var(--purple);
+.hero {
+  position: relative; width: 100%; height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+  overflow: hidden; background: var(--purple);
 }
 
-.page-hero{
-    height: 60vh;
+.page-hero { height: 60vh; }
+
+.hero video, .hero-image {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; z-index: 0;
 }
 
-/* ===========================
-   VIDEO / IMAGE
-=========================== */
-
-.hero video,
-.hero-image{
-
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: 0;
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0, 0, 0, 0.65); z-index: 1;
 }
 
-/* ===========================
-   OVERLAY
-=========================== */
-
-.hero::after{
-
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(20,8,35,.25),
-            rgba(60,20,95,.55)
-        );
-
-    z-index: 1;
+.hero-content {
+  position: relative; z-index: 2; width: min(1000px, 90%);
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; color: #fff;
 }
 
-/* ===========================
-   HERO CONTENT
-=========================== */
-
-.hero-content{
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:min(1200px,90%);
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    text-align:center;
-
-    z-index:2;
-
-    color:#fff;
+.hero-session {
+  font-family: 'Montserrat', sans-serif; font-size: 14px;
+  font-weight: 600; letter-spacing: 5px; text-transform: uppercase;
+  color: #ffffff; margin-bottom: 20px; opacity: 0.9;
 }
 
-/* Fade-in class */
-
-.hero-content.show{
-    opacity: 1;
-    transform: translateY(0);
+.hero-content h1 {
+  font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  font-weight: 700; line-height: 1.1; letter-spacing: 1px;
+  margin-bottom: 25px; text-shadow: 0 4px 20px rgba(0,0,0,.6);
 }
 
-/* ===========================
-   LOGO
-=========================== */
-
-.hero-content img{
-
-    width: 220px;
-    height: auto;
-
-    margin-bottom: 25px;
+.hero-dates {
+  font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic; margin-bottom: 35px; color: #ffffff; opacity: 0.95;
 }
 
-/* ===========================
-   HEADING
-=========================== */
-
-.hero-content h1{
-
-    font-family: Cinzel, serif;
-
-    font-size: clamp(3rem, 7vw, 6rem);
-
-    font-weight: 700;
-
-    line-height: 1.05;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
-
-    text-shadow: 0 10px 30px rgba(0,0,0,.35);
+.hero-description {
+  font-family: 'Playfair Display', serif; font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  max-width: 800px; line-height: 1.7; color: #ffffff; opacity: 0.9;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
 }
 
-/* ===========================
-   SUBTITLE
-=========================== */
+.btn-hmun-outline {
+  display: inline-block; padding: 16px 40px; border: 2px solid #ffffff;
+  background: transparent; color: #ffffff;
+  font-family: 'Montserrat', sans-serif; font-size: 13px;
+  font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  transition: all 0.3s ease;
+}
 
-.hero-content p{
-
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-
-    max-width: 800px;
-
-    margin: 0 auto;
-
-    opacity: .95;
-
-    line-height: 1.6;
-
-    text-shadow: 0 4px 15px rgba(0,0,0,.35);
+.btn-hmun-outline:hover {
+  background: #ffffff; color: #000000;
+  transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 /* ===========================
 SCROLL INDICATOR
