@@ -24,7 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- HMUN Matching Typography: Playfair Display (Headings) & Montserrat (Nav/Subtitles) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
@@ -35,23 +36,21 @@
 
 <body>
 
-<header>
+<header class="hmun-header">
 
 <nav class="navbar">
 
 <div class="logo">
 <img src="images/logo.png" alt="OOB MUN Logo">
-<h2>OOB MUN</h2>
 </div>
 
 <ul id="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="committees.html">Committees</a></li>
-<li><a href="schedule.html">Schedule</a></li>
-<li><a href="secretariat.html">Secretariat</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="committees.html">COMMITTEES</a></li>
+<li><a href="schedule.html">SCHEDULE</a></li>
+<li><a href="secretariat.html">SECRETARIAT</a></li>
+<li><a href="gallery.html">GALLERY</a></li>
+<li><a href="contact.html">CONTACT</a></li>
 </ul>
 
 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
@@ -64,48 +63,41 @@
 
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION (HMUN STYLE) -->
 
-<section class="hero">
+<section class="hero hmun-hero">
 
-<video autoplay muted playsinline preload="auto" id="intro-video" aria-hidden="true" poster="images/hero-poster.jpg">
-
+<video autoplay muted loop playsinline preload="auto" id="intro-video" aria-hidden="true" poster="images/hero-poster.jpg">
 <source src="images/intro.mp4" type="video/mp4">
-
 Your browser does not support the video tag.
-
 </video>
 
-<div class="hero-content">
+<!-- Dark overlay to ensure contrast over video background -->
+<div class="hero-overlay"></div>
 
-    <span class="hero-badge">Our Own Boys Sharjah</span>
+<div class="hero-content hmun-content">
+
+    <span class="hero-session">THE ANNUAL SESSION</span>
 
     <h1 class="hero-title">
-        MODEL UNITED <br>
-        NATIONS '26
+        Our Own Boys <br> Model United Nations
     </h1>
 
-    <p class="hero-dates">November 2026 &nbsp;•&nbsp; Sharjah, UAE</p>
-
-    <p class="tagline">A Tryst With Diplomacy</p>
+    <p class="hero-dates">November 20th, 2026 — November 22nd, 2026</p>
 
     <div class="hero-buttons">
-        <a href="contact.html" class="btn">Register Soon</a>
+        <a href="contact.html" class="btn btn-hmun-outline">REGISTER TODAY!</a>
     </div>
 
-</div>
-
-<div class="scroll">
-
-<span>SCROLL TO BEGIN</span>
-
-<div class="arrow">⌄</div>
+    <p class="hero-description">
+        A premier student-led Model UN conference in Sharjah dedicated to fostering diplomacy, critical debate, and young global leadership.
+    </p>
 
 </div>
 
 </section>
 
-<!-- WELCOME -->
+<!-- WELCOME SECTION -->
 
 <section class="welcome">
 
@@ -190,5 +182,4 @@ Loading...
 </footer>
 
 </body>
-
 </html>
