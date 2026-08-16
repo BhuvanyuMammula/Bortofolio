@@ -104,25 +104,27 @@ box-shadow:0 10px 30px rgba(0,0,0,.25);
 
 }
 
-.logo{
-
-display:flex;
-align-items:center;
-gap:18px;
-
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 35px; 
 }
 
-.logo img{
-
-width:110px; 
-height:110px; 
-object-fit:contain;
-transition: transform 0.3s ease; 
-
+.logo img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    
+    transform: scale(1.7); 
+    
+    transform-origin: left center; 
+    
+    transition: transform 0.3s ease;
 }
 
-.logo:hover img{
-transform: scale(1.05); 
+.logo:hover img {
+    transform: scale(1.85); 
+
 }
 
 .logo h2{
