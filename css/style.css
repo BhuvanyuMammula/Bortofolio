@@ -76,10 +76,10 @@ align-items:center;
 
 background:linear-gradient(
 180deg,
-rgba(30,0,51,.95) 0%,
-rgba(45,10,80,.82) 40%,
-rgba(75,31,115,.45) 70%,
-rgba(75,31,115,0) 100%
+rgba(10,0,20,.98) 0%,
+rgba(20,5,40,.90) 40%,
+rgba(40,10,60,.60) 70%,
+rgba(40,10,60,0) 100%
 );
 
 transition:
@@ -96,12 +96,17 @@ z-index:1000;
 
 .navbar.scrolled{
 
-background:rgba(30,0,51,.96);
+background:rgba(10,0,20,.99);
 
 backdrop-filter:blur(14px);
 
-box-shadow:0 10px 30px rgba(0,0,0,.25);
+box-shadow:0 10px 30px rgba(0,0,0,.40);
 
+}
+
+.navbar a.logo::after {
+    display: none; 
+    
 }
 .navbar a.logo::after {
     display: none; 
