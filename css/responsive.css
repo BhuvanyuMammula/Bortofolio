@@ -2,6 +2,10 @@
 OOB MUN RESPONSIVE STYLES
 ====================================== */
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* ===============================
 Large Tablets
 =============================== */
