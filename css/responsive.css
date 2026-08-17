@@ -65,15 +65,11 @@ Tablets
         z-index: 1100; /* Forces button above the menu and all other elements */
     }
 
-    /* The Slide-Out Drawer Menu */
 #nav-links {
     position: fixed;
     top: 0;
     right: -100%; 
-    
-    /* --- Adjusted Width (Made narrower) --- */
-    width: min(60%, 260px); /* Decreased from 75% / 320px */
-    
+    width: min(40%, 200px);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,11 +77,11 @@ Tablets
     align-items: center;
     gap: 30px;
     
-    /* --- Enhanced Liquid Glass Effect --- */
-    background: rgba(255, 255, 255, 0.03); /* Slightly more transparent */
-    backdrop-filter: blur(30px);            /* Increased blur intensity */
-    -webkit-backdrop-filter: blur(30px);    /* Safari support for blur */
-    border-left: 1px solid rgba(255, 255, 255, 0.15); /* Slightly brighter edge */
+    /* --- Extreme Blur with Purple Hue --- */
+    background: rgba(40, 10, 70, 0.4);      /* Deep, translucent purple tint */
+    backdrop-filter: blur(50px);            /* Heavy, intense blur effect */
+    -webkit-backdrop-filter: blur(50px);    /* Safari support for blur */
+    border-left: 1px solid rgba(180, 100, 255, 0.25); /* Soft purple-glowing edge */
     
     transition: right 0.4s ease;
     z-index: 1050;
