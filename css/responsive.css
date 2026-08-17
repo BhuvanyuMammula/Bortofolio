@@ -66,23 +66,27 @@ Tablets
     }
 
     /* The Slide-Out Drawer Menu */
-    #nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%; 
-        width: min(75%, 320px);
-        height: 100vh;
-        display: flex; /* REQUIRED for the layout below to work */
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 35px;
-        background: rgba(10, 0, 20, 0.98);
-        backdrop-filter: blur(14px);
-        transition: right 0.4s ease;
-        z-index: 1050;
-    }
+#nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: min(75%, 320px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    
+    /* --- Liquid Glass Effect Settings --- */
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    backdrop-filter: blur(20px);            /* Blurs everything behind the menu */
+    -webkit-backdrop-filter: blur(20px);    /* Safari support for blur */
+    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Subtle glowing edge */
+    
+    transition: right 0.4s ease;
+    z-index: 1050;
+}
 
     /* When active class is added by Javascript */
     #nav-links.active {
