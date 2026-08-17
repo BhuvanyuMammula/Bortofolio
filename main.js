@@ -54,6 +54,7 @@ if (video) {
     });
 
 }
+    
 // -----------------------------
 // Mobile Nav Toggle
 // -----------------------------
@@ -63,25 +64,34 @@ const navLinks = document.getElementById("nav-links");
 
 if (navToggle && navLinks) {
 
-    navToggle.addEventListener("click", () => {
-
+    navToggle.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevents instant closing on click
         const isOpen = navLinks.classList.toggle("active");
         navToggle.classList.toggle("active");
         navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
+        
+        // Prevents background page from scrolling while menu is open
+        document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
-    // Close menu when a link is tapped
+    // Close menu when any navigation link is tapped
     navLinks.querySelectorAll("a").forEach(link => {
-
         link.addEventListener("click", () => {
-
             navLinks.classList.remove("active");
             navToggle.classList.remove("active");
             navToggle.setAttribute("aria-expanded", "false");
-
+            document.body.style.overflow = "";
         });
+    });
 
+    // Close menu if user taps anywhere outside of the open menu
+    document.addEventListener("click", (e) => {
+        if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+            navLinks.classList.remove("active");
+            navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+        }
     });
 
 }
