@@ -70,19 +70,22 @@ Tablets
     position: fixed;
     top: 0;
     right: -100%; 
-    width: min(75%, 320px);
+    
+    /* --- Adjusted Width (Made narrower) --- */
+    width: min(60%, 260px); /* Decreased from 75% / 320px */
+    
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
     
-    /* --- Liquid Glass Effect Settings --- */
-    background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
-    backdrop-filter: blur(20px);            /* Blurs everything behind the menu */
-    -webkit-backdrop-filter: blur(20px);    /* Safari support for blur */
-    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Subtle glowing edge */
+    /* --- Enhanced Liquid Glass Effect --- */
+    background: rgba(255, 255, 255, 0.03); /* Slightly more transparent */
+    backdrop-filter: blur(30px);            /* Increased blur intensity */
+    -webkit-backdrop-filter: blur(30px);    /* Safari support for blur */
+    border-left: 1px solid rgba(255, 255, 255, 0.15); /* Slightly brighter edge */
     
     transition: right 0.4s ease;
     z-index: 1050;
