@@ -143,6 +143,47 @@ color:white;
 
 }
 
+.shine-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.shine-image img {
+    display: block;
+}
+
+.shine-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 35%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.15) 65%,
+        transparent 100%
+    );
+
+    transform: skewX(-20deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    45%, 100% {
+        left: 150%;
+    }
+}
+
 .navbar ul{
 
 display:flex;
