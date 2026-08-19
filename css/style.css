@@ -150,30 +150,32 @@ color:white;
 
 .oobmunlogo {
     display: block;
+    width: 180px; /* change this to your preferred size */
+    height: auto;
 }
 
 .footer-logo-shine::after {
     content: "";
     position: absolute;
-    top: -20%;
+    top: -30%;
     left: -100%;
     width: 45%;
-    height: 140%;
+    height: 160%;
 
     background: linear-gradient(
         110deg,
         transparent 0%,
         rgba(255, 255, 255, 0.05) 30%,
-        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 230, 130, 0.9) 50%,
         rgba(255, 255, 255, 0.05) 70%,
         transparent 100%
     );
 
     transform: skewX(-20deg);
-    animation: footerLogoShine 4s infinite;
+    animation: oobLogoShine 4s infinite;
 }
 
-@keyframes footerLogoShine {
+@keyframes oobLogoShine {
     0% {
         left: -100%;
     }
@@ -185,6 +187,7 @@ color:white;
     100% {
         left: 150%;
     }
+}
 }
 
 .navbar ul{
