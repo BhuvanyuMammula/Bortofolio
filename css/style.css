@@ -1446,65 +1446,74 @@ align-items:center;
    override
 ========================================= */
 
-
-.hero::after {
-    background: linear-gradient(rgba(20, 5, 35, 0.65), rgba(20, 5, 35, 0.85));
-}
-
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
     top: 50%;
+    width: 100%;
+    padding: 0 20px;
 }
+
 
 .hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    letter-spacing: 4px;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0;
+    color: white !important; 
+    margin-bottom: -10px;
 }
 
+
 .hero-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 500;
+    font-family: 'Bodoni Moda', serif !important; 
+    font-size: clamp(3rem, 7vw, 5.5rem) !important;
+    font-weight: 600;
     margin: 5px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    color: white;
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-transform: none !important; 
     line-height: 1.1;
 }
 
+
 .hero-dates {
     font-family: 'Bodoni Moda', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white !important; 
     letter-spacing: 1px;
     margin-bottom: 10px;
+    text-transform: none;
 }
+
 
 .btn-register {
     display: inline-block;
-    padding: 14px 40px;
+    padding: 16px 45px;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: white;
+    color: white !important;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: transparent;
-    border: 2px solid white;
-    margin: 15px 0 30px 0;
+    background: transparent !important;
+    border: 2px solid white !important;
+    margin: 15px 0 25px 0;
     transition: all 0.3s ease;
 }
 
+
 .btn-register:hover {
-    background: var(--purple);
-    border-color: var(--gold);
-    color: var(--gold);
+    background: rgba(40, 10, 60, 0.9) !important; 
+    border-color: #D4AF37 !important;             
+    color: #D4AF37 !important;                    
 }
+
 
 .hero-description {
     font-family: 'Bodoni Moda', serif;
@@ -1512,7 +1521,8 @@ align-items:center;
     line-height: 1.6;
     max-width: 850px;
     color: white;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    margin-top: 15px;
 }
 
 }
