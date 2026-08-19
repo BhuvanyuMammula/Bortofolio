@@ -382,85 +382,85 @@ right:0;
    HERO CONTENT
 =========================== */
 
+/* ===========================
+   HERO CONTENT (MODERN LEFT-ALIGNED)
+=========================== */
+
 .hero-content{
     position:absolute;
-
-    top:52%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:min(1200px,90%);
-
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    width:90%;
+    max-width:800px;
     display:flex;
     flex-direction:column;
-    align-items:center;
-
-    text-align:center;
-
+    align-items:flex-start;
+    text-align:left;
     z-index:2;
-
     color:#fff;
 }
 
 /* Fade-in class */
-
 .hero-content.show{
     opacity: 1;
     transform: translateY(0);
 }
 
 /* ===========================
-   LOGO
+   EYEBROW & HEADING
 =========================== */
 
-.hero-content img{
-
-    width: 220px;
-    height: auto;
-
-    margin-bottom: 25px;
+.hero-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
-
-/* ===========================
-   HEADING
-=========================== */
 
 .hero-content h1{
-
-    font-family: Cinzel, serif;
-
-    font-size: clamp(3rem, 7vw, 6rem);
-
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 700;
-
-    line-height: 1.05;
-
-    letter-spacing: 4px;
-
+    line-height: 1.1;
+    text-transform: uppercase;
     margin-bottom: 20px;
-
-    text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 /* ===========================
-   SUBTITLE
+   SUBTITLE & SOCIALS
 =========================== */
 
-.hero-content p{
-
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-
-    max-width: 800px;
-
-    margin: 0 auto;
-
-    opacity: .95;
-
-    line-height: 1.6;
-
-    text-shadow: 0 4px 15px rgba(0,0,0,.35);
+.hero-tagline {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
 }
+
+.hero-socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero-socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
 /* ===========================
 SCROLL INDICATOR
 =========================== */
@@ -1440,89 +1440,6 @@ flex-direction:column;
 
 align-items:center;
 
-}
-
-/* =========================================
-   override
-========================================= */
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    top: 50%;
-    width: 100%;
-    padding: 0 20px;
-}
-
-
-.hero-subtitle {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: white !important; 
-    margin-bottom: -10px;
-}
-
-
-.hero-title {
-    font-family: 'Bodoni Moda', serif !important; 
-    font-size: clamp(3rem, 7vw, 5.5rem) !important;
-    font-weight: 600;
-    margin: 5px 0;
-    color: white !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    text-transform: none !important; 
-    line-height: 1.1;
-}
-
-
-.hero-dates {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: white !important; 
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    text-transform: none;
-}
-
-
-.btn-register {
-    display: inline-block;
-    padding: 16px 45px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: white !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: transparent !important;
-    border: 2px solid white !important;
-    margin: 15px 0 25px 0;
-    transition: all 0.3s ease;
-}
-
-
-.btn-register:hover {
-    background: rgba(40, 10, 60, 0.9) !important; 
-    border-color: #D4AF37 !important;             
-    color: #D4AF37 !important;                    
-}
-
-
-.hero-description {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 850px;
-    color: white;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
-    margin-top: 15px;
 }
 
 }
