@@ -228,6 +228,14 @@ Mobile Phones
         font-size:15px;
     }
 
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
     footer{
         padding:25px;
     }
