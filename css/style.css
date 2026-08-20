@@ -875,3 +875,74 @@ RESPONSIVE TWEAKS
     .scroll { display:none; }
     .hero-content { top: 45%; }
 }
+
+/* ===========================
+   HERO REGISTER BUTTON & SHINE
+=========================== */
+
+.hero-register-btn {
+    display: inline-block;
+    margin-top: 35px; /* Adds perfect spacing below the social icons */
+    padding: 14px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--purple-dark);
+    background: var(--gold);
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden; /* Keeps the shine contained inside the button */
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* The Shine Element */
+.hero-register-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    z-index: 1;
+}
+
+/* 1. Desktop Hover Mechanics (For users with a mouse) */
+@media (hover: hover) and (pointer: fine) {
+    .hero-register-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+    
+    .hero-register-btn:hover::before {
+        animation: shine-effect 0.75s ease-in-out;
+    }
+}
+
+/* 2. Mobile Touch Mechanics (For users tapping a screen) */
+@media (hover: none) and (pointer: coarse) {
+    .hero-register-btn:active {
+        transform: scale(0.96); /* Gives a satisfying physical 'tap' depression */
+    }
+    
+    .hero-register-btn:active::before {
+        /* Faster shine so they see it right before the page changes */
+        animation: shine-effect 0.4s ease-in-out; 
+    }
+}
+
+/* The actual animation moving the light beam across */
+@keyframes shine-effect {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
