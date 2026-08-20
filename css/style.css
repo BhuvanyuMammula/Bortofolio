@@ -880,21 +880,25 @@ RESPONSIVE TWEAKS
    HERO REGISTER BUTTON & SHINE
 =========================== */
 
+/* ===========================
+   HERO REGISTER BUTTON (SUBTLY CURVED RECTANGLE)
+=========================== */
+
 .hero-register-btn {
     display: inline-block;
-    margin-top: 35px; /* Adds perfect spacing below the social icons */
-    padding: 14px 40px;
+    margin-top: 30px; /* Space between social icons and the button */
+    padding: 12px 36px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--purple-dark);
     background: var(--gold);
-    border-radius: 50px;
+    border-radius: 10px; /* Gives it a sleek, slightly curved rectangle look */
     text-decoration: none;
     position: relative;
-    overflow: hidden; /* Keeps the shine contained inside the button */
+    overflow: hidden; /* Keeps the shine contained inside */
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -917,7 +921,7 @@ RESPONSIVE TWEAKS
     z-index: 1;
 }
 
-/* 1. Desktop Hover Mechanics (For users with a mouse) */
+/* Desktop Hover Shine */
 @media (hover: hover) and (pointer: fine) {
     .hero-register-btn:hover {
         transform: translateY(-4px);
@@ -929,19 +933,17 @@ RESPONSIVE TWEAKS
     }
 }
 
-/* 2. Mobile Touch Mechanics (For users tapping a screen) */
+/* Mobile Tap Shine */
 @media (hover: none) and (pointer: coarse) {
     .hero-register-btn:active {
-        transform: scale(0.96); /* Gives a satisfying physical 'tap' depression */
+        transform: scale(0.96);
     }
     
     .hero-register-btn:active::before {
-        /* Faster shine so they see it right before the page changes */
         animation: shine-effect 0.4s ease-in-out; 
     }
 }
 
-/* The actual animation moving the light beam across */
 @keyframes shine-effect {
     0% { left: -100%; }
     100% { left: 200%; }
