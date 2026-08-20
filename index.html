@@ -30,7 +30,6 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css?v=2">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
 
 <script defer src="js/main.js"></script>
 
@@ -79,36 +78,32 @@ Your browser does not support the video tag.
 </video>
 
 <div class="hero-content">
-    
-    <div class="hero-content">
-        <h4 class="hero-cursive">Our Own English High School presents</h4>
-        <p class="hero-edition">THE 4th EDITION</p>
-        <h1>OOBMUN '26</h1>
-        <p class="hero-tagline">A Tryst With Diplomacy</p>
+    <h4 class="hero-cursive">Our Own English High School presents</h4>
+    <p class="hero-edition">THE 4TH EDITION</p>
+    <p class="hero-of">of</p>
+    <h1>OOBMUN '26</h1>
+    <p class="hero-tagline">A Tryst With Diplomacy</p>
        
-    <a href="https://www.instagram.com/oobmun/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-    
-    <a href="mailto:oobmun@gmail.com" aria-label="Email">
-        <i class="fa-regular fa-envelope"></i>
-    </a>
-    
-    <a href="https://www.youtube.com/@OOBMUNSecretariat" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-    </a>
-    
-    <a href="https://www.linkedin.com/company/oobmun/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-   </div>
+    <div class="hero-socials">
+        <a href="https://www.instagram.com/oobmun/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:oobmun@gmail.com" aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="https://www.youtube.com/@OOBMUNSecretariat" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/oobmun/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+    </div>
+</div>
     
 <a href="#welcome" class="scroll">
-        <span>SCROLL DOWN</span>
-        <div class="arrow"><i class="fa-solid fa-angle-down"></i></div>
-    </a>
-    
-</div>
+    <span>SCROLL DOWN</span>
+    <div class="arrow"><i class="fa-solid fa-angle-down"></i></div>
+</a>
 
 </section>
 
@@ -202,13 +197,17 @@ Loading...
     
     if(btn && menu) {
       btn.addEventListener("click", function(e) {
-        e.preventDefault(); // Stops any default blocking behavior
+        e.preventDefault(); 
         menu.classList.toggle("active");
         btn.classList.toggle("active");
       });
     }
   });
 </script>
+
+</body>
+
+</html>
 
 </body>
 
