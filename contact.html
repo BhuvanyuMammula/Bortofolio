@@ -147,7 +147,7 @@ Send Message
 
 </footer>
 
-<!-- Failsafe Mobile Menu Script -->
+<!-- FAILSAFE FOR MOBILE'S TOGGLE BAR -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const btn = document.getElementById("nav-toggle");
@@ -155,7 +155,7 @@ Send Message
     
     if(btn && menu) {
       btn.addEventListener("click", function(e) {
-        e.preventDefault(); // Stops any default blocking behavior
+        e.preventDefault();
         menu.classList.toggle("active");
         btn.classList.toggle("active");
       });
