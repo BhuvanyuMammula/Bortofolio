@@ -1,14 +1,10 @@
-// =====================================
-// OOB MUN - MAIN JAVASCRIPT
-// =====================================
+// OOB MUN MAIN JS
 
-// Wait until the page loads
+// Waits until the page loads
 document.addEventListener("DOMContentLoaded", () => {
 
-// -----------------------------
-// Intro Video
-// -----------------------------
 
+// Intro Video
 const video = document.getElementById("intro-video");
 const scroll = document.querySelector(".scroll");
 const heroContent = document.querySelector(".hero-content");
@@ -27,10 +23,9 @@ if (heroContent) {
 
 if (video) {
 
-    // Never loop
+    
     video.loop = false;
 
-    // Fade in logo & title after a short delay
     setTimeout(() => {
 
         if (heroContent) {
@@ -40,13 +35,13 @@ if (video) {
 
     }, 700);
 
-    // When video finishes
+    
     video.addEventListener("ended", () => {
 
-        // Freeze on the final frame
+        
         video.pause();
 
-        // Show Scroll indicator
+        
         if (scroll) {
             scroll.style.opacity = "1";
         }
@@ -55,9 +50,8 @@ if (video) {
 
 }
     
-// -----------------------------
+
 // Mobile Nav Toggle
-// -----------------------------
 
 const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -70,11 +64,11 @@ if (navToggle && navLinks) {
         navToggle.classList.toggle("active");
         navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         
-        // Prevents background page from scrolling while menu is open
+        
         document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
-    // Close menu when any navigation link is tapped
+   
     navLinks.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
@@ -84,7 +78,7 @@ if (navToggle && navLinks) {
         });
     });
 
-    // Close menu if user taps anywhere outside of the open menu
+  
     document.addEventListener("click", (e) => {
         if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
             navLinks.classList.remove("active");
@@ -96,9 +90,8 @@ if (navToggle && navLinks) {
 
 }
 
-// -----------------------------
 // Hero Parallax (fades/zooms the hero as you scroll past it)
-// -----------------------------
+
 
 const heroSection = document.querySelector(".hero:not(.page-hero)");
 const heroVideo = document.getElementById("intro-video");
@@ -138,9 +131,8 @@ if (heroSection) {
 
 }
 
-// -----------------------------
+
 // Navbar Background
-// -----------------------------
 
 const navbar = document.querySelector(".navbar");
 
@@ -156,9 +148,8 @@ window.addEventListener("scroll", () => {
 
 });
 
-// -----------------------------
+
 // Fade-in Animations
-// -----------------------------
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -201,13 +192,11 @@ observer.observe(el);
 
 });
 
-// -----------------------------
+
 // Countdown Timer
-// -----------------------------
 
 const timer = document.getElementById("timer");
 
-// TODO: update to the confirmed conference start date/time before launch
 const eventDate = new Date("November 15, 2026 07:30:00").getTime();
 
 function updateTimer(){
