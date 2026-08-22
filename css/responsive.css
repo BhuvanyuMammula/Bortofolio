@@ -1,14 +1,7 @@
-/* ======================================
-OOB MUN RESPONSIVE STYLES
-====================================== */
 
 * {
     -webkit-tap-highlight-color: transparent;
 }
-
-/* ===============================
-Large Tablets
-=============================== */
 
 @media (max-width:1200px){
 
@@ -48,10 +41,6 @@ Large Tablets
 
 }
 
-/* ===============================
-Tablets
-=============================== */
-
 @media (max-width:992px){
 
     .navbar{
@@ -90,7 +79,6 @@ Tablets
     z-index: 1050;
 }
 
-    /* When active class is added by Javascript */
     #nav-links.active {
         right: 0 !important; 
     }
@@ -118,9 +106,9 @@ Tablets
 
 }
 
-/* ===============================
+/*
 Mobile Phones
-=============================== */
+*/
 
 @media (max-width:768px){
 
@@ -242,9 +230,9 @@ Mobile Phones
 
 }
 
-/* ===============================
+/*
 Small Phones
-=============================== */
+*/
 
 @media (max-width:480px){
 
