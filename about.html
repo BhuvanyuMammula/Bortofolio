@@ -75,51 +75,38 @@
 <h2>A Tryst with Diplomacy</h2>
 
 <p>
-
 Arduous negotiations, scintillating global scenarios, and invaluable diplomacy trade will reign supreme as this Inter-School Model United Nations conference takes flight.
-
 </p>
 
 </section>
-
 <section class="highlights">
 
 <div class="card">
-
 <h3>Student Leadership</h3>
-
+    
 <p>
-
 Entirely organised and managed by dedicated students.
-
 </p>
 
 </div>
 
 <div class="card">
-
 <h3>Diplomacy</h3>
 
 <p>
-
 Develop negotiation, public speaking and leadership skills.
-
 </p>
 
 </div>
 
 <div class="card">
-
 <h3>Global Perspective</h3>
 
 <p>
-
 Engage with pressing international issues through debate.
-
 </p>
 
 </div>
-
 </section>
 
 <footer>
@@ -130,15 +117,16 @@ Engage with pressing international issues through debate.
 
 </footer>
 
-<!-- Failsafe Mobile Menu Script -->
+<!-- FAILSAFE FOR MOBILE'S TOGGLE BAR -->
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const btn = document.getElementById("nav-toggle");
     const menu = document.getElementById("nav-links");
-    
+ 
     if(btn && menu) {
       btn.addEventListener("click", function(e) {
-        e.preventDefault(); // Stops any default blocking behavior
+        e.preventDefault();
         menu.classList.toggle("active");
         btn.classList.toggle("active");
       });
